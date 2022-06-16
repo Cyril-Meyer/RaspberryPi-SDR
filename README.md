@@ -16,4 +16,16 @@ Raspberry Pi usage for Software Defined Radio.
     static routers=192.168.1.1
     static domain_name_servers=192.168.1.1
     ```
+* Update / Upgrade
+  * sudo apt update
+  * sudo apt upgrade
+
+
+**RTL-SDR server**
+* Install
+  * `sudo apt-get install rtl-sdr`
+* Test
+  * `rtl_test -t`
+* Run server
+  * `rtl_tcp -a 192.168.1.180`
 
