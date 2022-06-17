@@ -1,5 +1,5 @@
 # RaspberryPi-SDR
-Raspberry Pi usage for Software Defined Radio.
+Raspberry Pi as a remote server for Software Defined Radio.
 
 
 ## Raspberry Pi base setup
@@ -24,6 +24,7 @@ Raspberry Pi usage for Software Defined Radio.
 ## RTL-SDR
 * Install
   * `sudo apt-get install rtl-sdr librtlsdr-dev`
+
 ### RTL-SDR TCP server
 * Test
   * `rtl_test -t`
@@ -39,6 +40,24 @@ Raspberry Pi usage for Software Defined Radio.
   * edit spyserver.config, change device_type to RTL-SDR
 * Run server
   * `./spyserver`
+
+## HackRF One
+### HackRF TCP server
+* Install
+  * `sudo apt-get install hackrf`
+* Test
+  * `hackrf_info`
+* Build `hackrf_tcp` ([source](https://www.tablix.org/~avian/blog/archives/2021/03/hackrf_tcp_a_rtl_tcp_for_hackrf/))
+  * `git clone https://github.com/avian2/hackrf.git`
+  * `cd hackrf`
+  * `mkdir host/build`
+  * `cd host/build`
+  * `cmake ..`
+  * `make`
+  * `sudo make install`
+  * `sudo ldconfig`
+* Run server
+  * `hackrf_tcp -a 192.168.1.180`
 
 ## RSP-SDR
 * `wget -O SDRplay_RPi_Scripts_v0.3.zip https://www.sdrplay.com/software/SDRplay_RPi_Scripts_v0.3.zip`
