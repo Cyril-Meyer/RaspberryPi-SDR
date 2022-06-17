@@ -29,3 +29,15 @@ Raspberry Pi usage for Software Defined Radio.
 * Run server
   * `rtl_tcp -a 192.168.1.180`
 
+**SpyServer**
+* Install
+  * `sudo apt-get install librtlsdr-dev
+  * `wget -O spyserver-arm32.tgz http://airspy.com/?ddownload=4247`
+    *  link may change : [airspy.com/download](https://airspy.com/download/) : SPY Server – SDR Server for Linux ARMHF
+  * tar xvzf spyserver-arm32.tgz
+* Configuration
+  * edit spyserver.config, change device_type to RTL-SDR
+* Run server
+  * `./spyserver`
+
+
