@@ -52,7 +52,7 @@ Raspberry Pi usage for Software Defined Radio.
   * `rsp_tcp -a 192.168.1.180`
 
 
-### Hardware used
+## Hardware used
 
 |    |    |
 |:--:|:--:|
